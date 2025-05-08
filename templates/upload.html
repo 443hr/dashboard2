@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Excel Files | RMIT Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #d50032;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .upload-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 20px;
+        }
+
+        .upload-box {
+            background-color: white;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            text-align: center;
+        }
+
+        .upload-box h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        input[type="file"] {
+            margin: 10px 0;
+            padding: 8px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #d50032;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #a60027;
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>RMIT University Dashboard</h1>
+</header>
+
+<div class="upload-container">
+    <div class="upload-box">
+        <h2>Upload Multiple Excel Files</h2>
+        <form action="/" method="POST" enctype="multipart/form-data">
+            <input type="file" name="files" multiple accept=".xlsx,.xls"><br><br>
+            <input type="submit" value="Upload">
+        </form>
+    </div>
+</div>
+
+<footer>
+    &copy; 2025 RMIT University. All rights reserved.
+</footer>
+
+</body>
+</html>

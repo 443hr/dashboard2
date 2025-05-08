@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RMIT Dashboard – Second View</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #d50032;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content {
+            padding: 40px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        img {
+            max-width: 800px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #d50032;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        button:hover {
+            background-color: #a60027;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>RMIT University Weekly Trends</h1>
+    </header>
+
+    <div class="content">
+        <h2>Spider Chart: File Comparison</h2>
+        <img src="{{ url_for('spider_png') }}" alt="Spider Chart" id="chart-img">
+        <br><br>
+
+        <!-- Download button -->
+        <a href="{{ url_for('spider_png') }}" download="spider_chart.png">
+            <button>Download Chart</button>
+        </a>
+        <!-- Back button -->
+        <a href="{{ url_for('dashboard') }}">
+            <button>Back to Summary</button>
+        </a>
+    </div>
+
+    <footer>
+        &copy; 2025 RMIT University. All rights reserved.
+    </footer>
+
+</body>
+</html>

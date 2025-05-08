@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RMIT Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #d50032;
+            color: white;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .content {
+            padding: 40px;
+            text-align: center;
+            
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        img {
+            max-width: 700px;   
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            color: #333;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #d50032;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1> Summary Dashboard</h1>
+    </header>
+    <div class="content">
+        <img src="{{ url_for('plot_png') }}" alt="Pie Chart">
+        <br><br>
+
+         <!-- Download button -->
+         <a href="{{ url_for('plot_png') }}" download="plot_png.png">
+            <button>Download Chart</button>
+        </a>
+        <a href="{{ url_for('dashboard2') }}">
+            <button>Second View</button>
+        </a>
+    </div>
+    <footer>
+        &copy; 2025 RMIT University. All rights reserved.
+    </footer>
+
+</body>
+</html>
